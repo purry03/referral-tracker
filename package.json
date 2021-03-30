@@ -2,7 +2,7 @@
   "name": "referral-tracker",
   "version": "1.0.0",
   "description": "A node.js web application to generate referral links and get detailed analytics.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,9 @@
   "homepage": "https://github.com/purry03/referral-tracker#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "mongoose": "^5.12.2"
+    "mongoose": "^5.12.2",
+    "random-token": "0.0.8"
   }
 }
