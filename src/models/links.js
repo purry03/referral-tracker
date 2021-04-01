@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 module.exports = async (mainDB) => {
   const linkSchema = mongoose.Schema({
-    source: String,
-    destination: String,
+    sourceLink: String,
+    referralCode: String,
   });
 
   const Link = mainDB.model("Link", linkSchema);

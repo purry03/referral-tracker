@@ -1,5 +1,5 @@
-const link = require("./link.js");
+const links = require("./links.js");
 
 module.exports = {
-  link,
+  links,
 };

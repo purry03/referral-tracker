@@ -1,36 +1,30 @@
 const express = require("express");
 const router = express.Router();
-const database = require("../../database");
+const services = require("../../services");
 
 router.get("/", function (req, res) {
   res.render("index.ejs");
 });
 
-router.get("/referral/:shortenedLink", function (req, res) {
-  const linkToOpen = req.params.shortenedLink;
-  if (linkToOpen == null) {
-    res.redirect("/");
-  } else {
-    database.link.findLink(linkToOpen, function (err, source) {
-      if (err) {
-        res.send(500);
-      } else {
-        res.redirect(source);
-      }
+router.get("/referral/:referralCode", function (req, res) {
+  services.links
+    .resolveReferralLink(req, res)
+    .then((sourceLink) => {
+      res.redirect(sourceLink);
+    })
+    .catch((err) => {
+      res.sendStatus(500);
     });
-  }
 });
 
 router.post("/generate", function (req, res) {
-  database.link.getNewLink(req.body.link, function (err, link) {
-    if (err) {
-      console.log(err);
+  services.links
+    .generateReferralLink(req, res)
+    .then((referralLink) => {
+      res.send(referralLink);
+    })
+    .catch((err) => {
       res.sendStatus(500);
-    } else {
-      var baseUrl = req.protocol + "://" + req.get("host");
-      console.log(baseUrl);
-      res.send(baseUrl + "/referral/" + link);
-    }
-  });
+    });
 });
 module.exports = router;
