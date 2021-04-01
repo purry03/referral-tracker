@@ -8,8 +8,8 @@ module.exports.generateReferralLink = (req, res) => {
     database.links
       .saveNewReferralCode(sourceLink, referralCode)
       .then((isSaved) => {
-        var baseUrl = req.protocol + "://" + req.get("host");
-        resolve(baseUrl + "/referral/" + referralCode);
+        var appUrl = req.protocol + "://" + req.get("host");
+        resolve(appUrl + "/referral/" + referralCode);
       })
       .catch((err) => {
         reject(err);

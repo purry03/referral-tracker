@@ -6,9 +6,7 @@ module.exports = async () => {
   mongoose.set("useCreateIndex", true);
   mongoose.set("useUnifiedTopology", true);
 
-  const linksDB = await mongoose.createConnection(
-    "mongodb+srv://admim:ZdNdbkNG6fcONGvE@cluster0.cr66t.mongodb.net/mainDB"
-  );
+  const linksDB = await mongoose.createConnection(DB_SRV);
 
   return { linksDB };
 };

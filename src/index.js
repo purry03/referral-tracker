@@ -1,15 +1,15 @@
 const express = require("express");
+const config = require("./config");
 const loaders = require("./loaders");
 const modelLoader = require("./models");
 const controllers = require("./controllers");
 const url = require("url");
 
-global.__basedir = __dirname;
-
 startServer();
 
 async function startServer() {
   const app = express();
+  config.init();
   await loaders.init(app);
   await controllers.init(app);
   app.listen(process.env.PORT || 80, (err) => {

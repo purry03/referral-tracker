@@ -1,0 +1,65 @@
+.link-field {
+  height: 35px;
+  width: 66%;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+.generate-button {
+  height: 36px;
+  width: 33%;
+}
+
+.generate-container h3 {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.referral-link {
+  margin-left: 10px;
+  font-size: 0.95rem;
+  color: #42dc95;
+  cursor: pointer;
+}
+
+.assign-container {
+  margin-top: 100px;
+}
+
+.assign-container table {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #333;
+}
+
+.assign-container .referral-link {
+  margin-left: 0;
+  margin-top: 25px;
+  font-size: 1rem;
+}
+
+.assign-container table {
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+.assign-container table,
+.assign-container th,
+.assign-container td {
+  padding: 10px;
+  border: #333 1px solid;
+  border-collapse: collapse;
+}
+
+.assign-container th {
+  width: 33%;
+}
+
+.assign-container .btn {
+  margin: 0 15px;
+  padding: 5px;
+  background-color: #222;
+  font-size: 0.75rem;
+}

@@ -1,17 +1,146 @@
 <html>
   <head>
-    <title>Generate referral link</title>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <title>D'coder Referral</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/normalizer.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://kit.fontawesome.com/b1150f83bb.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
   </head>
+
   <body>
-    <h1>Generate referral link</h1>
-    <label>Enter link:<input type="text" class="link" name="link" /></label>
-    <button onclick="getReferralLink()">Get link</button>
-    <script src="index.js"></script>
-    <h3>Your referral link is : <span class="referralLink"></span></h3>
+    <div class="nav-container">
+      <a href="https://purry03.github.io" target="_blank">
+        <img src="img/purry03.png" class="nav-logo"
+      /></a>
+      <h3>Referral Manager</h3>
+
+      <ul class="nav-list">
+        <li>Dashboard</li>
+        <li class="is-active">Generate</li>
+        <li>Analytics</li>
+        <li>Users</li>
+        <li>Configuration</li>
+      </ul>
+    </div>
+    <div class="main-container">
+      <div class="generate-container">
+        <h2>Generate Referral Link</h2>
+        <input type="url" class="link-field" name="link" />
+        <button class="btn generate-button" onclick="getReferralLink()">
+          Generate
+        </button>
+
+        <h3>
+          Referral Link :
+          <span class="referral-link"
+            >http://localhost/referral/5kyjgwazlgud
+          </span>
+        </h3>
+      </div>
+      <div class="assign-container">
+        <h2>Assign Link</h2>
+        <table>
+          <tr>
+            <th>Referral Link</th>
+            <th>User</th>
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>http://localhost/referral/5kyjgwazlgud</td>
+            <td>
+              <select>
+                <option>John Doe</option>
+                <option>Mon Roe</option>
+                <option>Don Low</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn">Assign</button>
+              <button class="btn">Delete</button>
+              <button class="btn">Analytics</button>
+            </td>
+          </tr>
+          <tr>
+            <td>http://localhost/referral/5kyjgwazlgud</td>
+            <td>
+              <select>
+                <option>John Doe</option>
+                <option>Mon Roe</option>
+                <option>Don Low</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn">Assign</button>
+              <button class="btn">Delete</button>
+              <button class="btn">Analytics</button>
+            </td>
+          </tr>
+          <tr>
+            <td>http://localhost/referral/5kyjgwazlgud</td>
+            <td>
+              <select>
+                <option>John Doe</option>
+                <option>Mon Roe</option>
+                <option>Don Low</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn">Assign</button>
+              <button class="btn">Delete</button>
+              <button class="btn">Analytics</button>
+            </td>
+          </tr>
+          <tr>
+            <td>http://localhost/referral/5kyjgwazlgud</td>
+            <td>
+              <select>
+                <option>John Doe</option>
+                <option>Mon Roe</option>
+                <option>Don Low</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn">Assign</button>
+              <button class="btn">Delete</button>
+              <button class="btn">Analytics</button>
+            </td>
+          </tr>
+          <tr>
+            <td>http://localhost/referral/5kyjgwazlgud</td>
+            <td>
+              <select>
+                <option>John Doe</option>
+                <option>Mon Roe</option>
+                <option>Don Low</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn">Assign</button>
+              <button class="btn">Delete</button>
+              <button class="btn">Analytics</button>
+            </td>
+          </tr>
+          <tr>
+            <td>http://localhost/referral/5kyjgwazlgud</td>
+            <td>
+              <select>
+                <option>John Doe</option>
+                <option>Mon Roe</option>
+                <option>Don Low</option>
+              </select>
+            </td>
+            <td>
+              <button class="btn">Assign</button>
+              <button class="btn">Delete</button>
+              <button class="btn">Analytics</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </body>
 </html>

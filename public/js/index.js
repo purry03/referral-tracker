@@ -1,6 +1,6 @@
 function getReferralLink() {
-  var link = $(".link").val().toString();
+  var link = $(".link-field").val().toString();
   $.post("/generate", { link: link }, function (data) {
-    $(".referralLink").html(data);
+    $(".referral-link").html(data);
   });
 }
